@@ -41,117 +41,6 @@ body {
     text-align: center;
 }
 
-.imageWrapper {
-    width: 80%;
-    height: 150px;
-    margin: 30px 10% 30px 10%;
-}
-
-.imageText {
-    color :white;
-    text-align: center;
-    margin-top: -85px;
-    font-size: 16px;
-    font-family: titleFont;
-    opacity: 100%;
-    visibility: hidden;
-}
-
-.imageWrapper:hover {
-    opacity: 60%;
-    cursor: pointer;
-}
-
-.imageWrapper:hover .imageText{
-    visibility: visible;
-}
-
-/*OTHER*/
-
-#image1 {
-    height: 100%;
-    width: 100%;
-    background-image: url("../pics/0/0.png");
-    background-size: cover;
-    border-radius: 20px;
-}
-#image2 {
-    height: 100%;
-    width: 100%;
-    background-image: url("../pics/0/0.png");
-    background-size: cover;
-    border-radius: 20px;
-}
-#image3 {
-    height: 100%;
-    width: 100%;
-    background-image: url("../pics/0/0.png");
-    background-size: cover;
-    border-radius: 20px;
-}
-#image4 {
-    height: 100%;
-    width: 100%;
-    background-image: url("../pics/0/0.png");
-    background-size: cover;
-    border-radius: 20px;
-}
-#image5 {
-    height: 100%;
-    width: 100%;
-    background-image: url("../pics/0/0.png");
-    background-size: cover;
-    border-radius: 20px;
-}
-
-#settingsPanel {
-    position: absolute;
-    right: -360px;
-    top: 0;
-    padding-right: 10px;
-
-    height: 100%;
-    width: 350px;
-    background-color: rgb(0,0,0,0.4);
-
-    transition: 1s;
-    z-index: 10;
-}
-
-#settingsPanel:hover {
-    margin-right: 360px;
-    transition: 0.7s;
-}
-
-#settingsPanel:hover {
-    margin-left: 360px;
-    transition: 1s;
-}
-
-#settingsPanel:hover > #settingsIcon {
-    width: 0;
-    transition: 0.7s;
-}
-
-#settingsTitle {
-    text-align: center;
-    font-family: titleFont;
-    color: white;
-}
-
-#settingsIcon {
-    position: absolute;
-    top: 10px;
-    right: 361px;
-    margin: 0;
-    width: 35px;
-    height: 35px;
-    background-image: url("../pics/gear.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    transition: 0.5s;
-}
-
 
 #background {
 	top:0px;
@@ -162,6 +51,7 @@ body {
 	height: 100%;
 	width: 100%; 
     object-fit: cover;
+    opacity: 0.6;
 }
 
 #feedTitle {
@@ -334,7 +224,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 140px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     z-index: 1;
 }
 
@@ -342,11 +232,13 @@ body {
     font-size: 26px;
     font-style: italic;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 }
 
 #footer #author {
     font-size: 20px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
 }
 
 #searchBox{
@@ -362,7 +254,7 @@ body {
 #searchbar{
     height:100%;
     border: none;
-    width:100%;
+    width:88%;
     margin-left: 40px;
 
     font-size:16px;
@@ -372,8 +264,7 @@ body {
     font-size: 10pt;
     color: var(--quote-color);
     padding:0 5px;
-    line-height:100%;
-    
+    line-height:100%;    
 }
 
 #searchBox #icon {

@@ -19,57 +19,15 @@
         <script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
     </head>
 
-    <body onload="timeTick(), setDate(), pickBackground(), getRssFeed(), initWeather(), pickQuote(), initSettings()">
-        <script src="scripts/fetcher.js"></script>
+    <body onload="timeTick(), setDate(), pickBackground(), pickQuote()">
+        <!--<script src="scripts/fetcher.js"></script>-->
+
         <img id="background" src="">
-            <input id="file-input" type="file" name="name" accept="image/png, image/jpeg" style="display: none;" onchange="loadFile(event)"/>
-            <div id="settingsPanel">
-                <div id="settingsIcon"></div>
-                <div id="textwrapper">
-                    <h1 id="settingsTitle">Settings</h1>
-                </div>
-                <div class="imageWrapper">
-                    <img id="image1" src="pics/0/0.png" onClick="changeImage(1)">
-                    <div class="imageText" onClick="changeImage(1)">Change Image</div>
-                </div>
-                <div class="imageWrapper">
-                    <img id="image2" src="pics/0/1.png" onClick="changeImage(2)">
-                    <div class="imageText">Change Image</div>
-                </div>
-                <div class="imageWrapper">
-                    <img id="image3" src="pics/0/2.png" onClick="changeImage(3)">
-                    <div class="imageText">Change Image</div>
-                </div>
-                <div class="imageWrapper">
-                    <img id="image4" src="pics/0/3.png" onClick="changeImage(4)">
-                    <div class="imageText">Change Image</div>
-                </div>
-                <div class="imageWrapper">
-                    <img id="image5" src="pics/0/4.png" onClick="changeImage(5)">
-                    <div class="imageText">Change Image</div>
-                </div>
-            </div>
-            <div id="sidepanel">
-                <div id="newsIcon"></div>
-                <div class="feedBlock">
-                    <div class="textwrapper">
-                        <h1 id="feedTitle">today</h1>
-                    </div>
-                    <div id="feed-textarea">
-                        <ul></ul>
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
-            </div>
             <div id="mainSection">
                 <div class="textwrapper">
                     <div id="title"></div>
                     <div id="dateWeather">
                         <div id="date"></div>
-                        <div id="weather" onmouseover="weatherToggleOn()" onmouseout="weatherToggleOff()">
-                            <button id="weatherButton"></button>
-                            <input id="weatherInput" onkeydown="changeLocation(event)" onfocusout="weatherToggleOff()" placeholder="city">
-                        </div>
                     </div>
                 </div>
             </div>
