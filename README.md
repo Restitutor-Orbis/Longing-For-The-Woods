@@ -2,6 +2,8 @@
 
 A fantasy themed start page with inspiration from the metal band Wuthering Heights.
 
+![showcase](pics/showcase.png)
+
 # Customization
 
 My code is probably a mess, but it should be pretty straight forward to edit.
