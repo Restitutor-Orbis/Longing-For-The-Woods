@@ -217,9 +217,9 @@ function generateQuote() {
             idToSong.set("1",
             "The Desparate Poet");
             quotes.set("2",
-            "The weight of the world proved much too tough. Just dragging myself along was more than enough");
+            "There's no way to cut the Gordian Knot of past webs entangled");
             idToSong.set("2",
-            "The Mad Sailor");
+            "Tears");
             quotes.set("3",
             "I will write no solemn epitaphs for a world that's gone insane");
             idToSong.set("3",
@@ -229,9 +229,9 @@ function generateQuote() {
             idToSong.set("4",
             "The Last Tribe");
             quotes.set("5",
-            "There's no way to cut the Gordian Knot of past webs entangled");
+            "The weight of the world proved much too tough. Just dragging myself along was more than enough");
             idToSong.set("5",
-            "Tears");
+            "The Mad Sailor");
             quotes.set("6",
             "Tears of sorrow make a man of me");
             idToSong.set("6",
