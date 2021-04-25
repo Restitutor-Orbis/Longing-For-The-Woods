@@ -8,6 +8,10 @@ A fantasy themed start page with inspiration from the metal band Wuthering Heigh
 
 My code is probably a mess, but it should be pretty straight forward to edit.
 
+## Language
+
+The program *should* automatically detect if you're using Danish, Spanish or English (default) and use month names accordingly.
+
 ## Images
 
 Add images to the /pics/ folders (or change the directory). Then in themePicker.js add the file path to each pape (line 7-15).
