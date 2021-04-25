@@ -40,7 +40,7 @@ function getOpacity(imageNumber) {
             opacity = 0.7;
             break;
         case 1:
-            opacity = 0.55;
+            opacity = 0.75;
             break;
         case 2:
             opacity = 0.9;
@@ -61,7 +61,7 @@ function getOpacity(imageNumber) {
             opacity = 0.9;
             break;
         case 8:
-            opacity = 0.9;
+            opacity = 0.75;
             break;
         default:
             opacity = 0.55;
