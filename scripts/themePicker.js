@@ -13,8 +13,9 @@ function pickBackground() {
     var background6 =  "./pics/0/6.jpg";
     var background7 =  "./pics/0/7.jpg";
     var background8 =  "./pics/0/8.jpg";
+    var background9 =  "./pics/0/9.jpg";
 
-    var background = [background0, background1, background2, background3, background4, background5, background6, background7, background8];
+    var background = [background0, background1, background2, background3, background4, background5, background6, background7, background8, background9];
 
     var N = background.length; // number of images
     console.log(N);
