@@ -4,22 +4,26 @@
 var oneQuotePerDay = false; //change quote daily?
 
 function pickBackground() {
-    var background0 =  "./pics/0/0.jpg";
-    var background1 =  "./pics/0/1.jpg";
-    var background2 =  "./pics/0/2.jpg";
-    var background3 =  "./pics/0/3.jpg";
-    var background4 =  "./pics/0/4.jpg";
-    var background5 =  "./pics/0/5.jpg";
-    var background6 =  "./pics/0/6.jpg";
-    var background7 =  "./pics/0/7.jpg";
-    var background8 =  "./pics/0/8.jpg";
-    var background9 =  "./pics/0/9.jpg";
+    var background0  =  "./pics/0/0.jpg";
+    var background1  =  "./pics/0/1.jpg";
+    var background2  =  "./pics/0/2.jpg";
+    var background3  =  "./pics/0/3.jpg";
+    var background4  =  "./pics/0/4.jpg";
+    var background5  =  "./pics/0/5.jpg";
+    var background6  =  "./pics/0/6.jpg";
+    var background7  =  "./pics/0/7.jpg";
+    var background8  =  "./pics/0/8.jpg";
+    var background9  =  "./pics/0/9.jpg";
+    var background10 =  "./pics/0/10.jpg";
+    var background11 =  "./pics/0/11.jpg";
 
-    var background = [background0, background1, background2, background3, background4, background5, background6, background7, background8, background9];
+    var background = [background0, background1, background2, background3, background4,
+                      background5, background6, background7, background8, background9,
+                      background10, background11];
 
     var N = background.length; // number of images
-    console.log(N);
     var image = randomPicker(N);
+    image = 11;
     var opacity = getOpacity(image); //changes brightness for individual papes
     image = background[image];
 
@@ -63,6 +67,12 @@ function getOpacity(imageNumber) {
             break;
         case 8:
             opacity = 0.75;
+            break;
+        case 10:
+            opacity = 0.85;
+            break;
+        case 11:
+            opacity = 0.8;
             break;
         default:
             opacity = 0.55;
@@ -128,7 +138,7 @@ function generateQuote() {
             idToSong.set("6",
             "Through Within to Beyond");
             quotes.set("7",
-            "I will shape my own path to travel for evermore. Through within to beyond");
+            "I will shape my own path to travel for evermore.\n Through within to beyond");
             idToSong.set("7",
             "Through Within to Beyond");
             break;
@@ -138,11 +148,11 @@ function generateQuote() {
             idToSong.set("0",
             "The Road Goes Ever On");
             quotes.set("1",
-            "From a buried seed a forest will be. You may destroy, but you cannot undo");
+            "From a buried seed a forest will be.\n You may destroy, but you cannot undo");
             idToSong.set("1",
             "Tree");
             quotes.set("2",
-            "Now the wind calls a storm from the past. Night falls, and they're longing for the woods");
+            "Now the wind calls a storm from the past. \n Night falls, and they're longing for the woods");
             idToSong.set("2",
             "Longing For The Woods");
             quotes.set("3",
@@ -162,7 +172,7 @@ function generateQuote() {
             idToSong.set("6",
             "Land of Olden Glory");
             quotes.set("7",
-            "A dream now gone, a name in a song. The garden of the Gods, faded and lost");
+            "A dream now gone, a name in a song. \n The garden of the Gods, faded and lost");
             idToSong.set("7",
             "Lament for Lorien");
             break;
@@ -172,7 +182,7 @@ function generateQuote() {
             idToSong.set("0",
             "Demon Desire");
             quotes.set("1",
-            "I hate the pity in your eyes. You know you'll always win the race, no matter how hard I try");
+            "I hate the pity in your eyes. \n You know you'll always win the race, no matter how hard I try");
             idToSong.set("1",
             "Beatifool");
             quotes.set("2",
