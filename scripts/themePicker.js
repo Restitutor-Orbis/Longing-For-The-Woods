@@ -23,7 +23,7 @@ function pickBackground() {
 
     var N = background.length; // number of images
     var image = randomPicker(N);
-    image = 8;
+    //image = 8;
     var opacity = getOpacity(image); //changes brightness for individual papes
     image = background[image];
 
