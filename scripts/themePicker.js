@@ -16,14 +16,15 @@ function pickBackground() {
     var background9  =  "./pics/0/9.jpg";
     var background10 =  "./pics/0/10.jpg";
     var background11 =  "./pics/0/11.jpg";
+    var background12 =  "./pics/0/12.jpg";
 
     var background = [background0, background1, background2, background3, background4,
                       background5, background6, background7, background8, background9,
-                      background10, background11];
+                      background10, background11, background12];
 
     var N = background.length; // number of images
     var image = randomPicker(N);
-    //image = 8;
+    //image = 12;
     var opacity = getOpacity(image); //changes brightness for individual papes
     image = background[image];
 
@@ -54,7 +55,7 @@ function getOpacity(imageNumber) {
             opacity = 0.9;
             break;
         case 4:
-            opacity = 0.9;
+            opacity = 0.7;
             break;
         case 5:
             opacity = 0.9;
@@ -63,15 +64,21 @@ function getOpacity(imageNumber) {
             opacity = 0.9;
             break;
         case 7:
-            opacity = 0.9;
+            opacity = 0.7;
             break;
         case 8:
-            opacity = 0.65;
+            opacity = 0.55;
+            break;
+        case 9:
+            opacity = 0.45;
             break;
         case 10:
             opacity = 0.85;
             break;
         case 11:
+            opacity = 0.9;
+            break;
+        case 12:
             opacity = 0.8;
             break;
         default:
