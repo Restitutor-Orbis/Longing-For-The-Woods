@@ -9,13 +9,61 @@ function pickQuote() {
             localStorage.today = today_actual;
         }
     } else {
-        generateQuote();
+        getRandomQuote();
     }
     setQuote();
     setAuthor();
 }
 
+function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
+async function getRandomQuote() {
+
+    var albums = ["Within", "To Travel for Evermore", "Far From the Madding Crows", "The Shadow Cabinet", "Salt"]
+    var albumRanges = [19, 25, 27, 41, 67];
+
+    //pick random album and select corresponding range
+    var randomNumber = randomIntFromInterval(0, 5);
+    var album = albums[randomNumber];
+    var range = albumRanges[randomNumber];
+
+    //pick random quote from collection
+    var quoteIndex = randomIntFromInterval(1, range);
+    var document = "Quote" + quoteIndex;
+
+    //fetch from firebase database
+    //make sure fetching is done before doing operations
+    const doc = await db.collection(album).doc(document).get().then((doc) => {
+
+        //make sure linebreaks are converted from firebase format
+        var quote = doc.data().Quote.replaceAll( "\\n", "\n" );
+        var author = doc.data().Song + " (" + album + ")";
+
+        localStorage.quote = quote;
+        localStorage.author = author;
+
+        setQuote();
+        setAuthor();
+    });
+}
+
+function setQuote() {
+    document.getElementById("quote").innerHTML = localStorage.quote;
+}
+
+function setAuthor() {
+    document.getElementById("authorName").innerHTML = localStorage.author;
+}
+
+
+//with firebase this is redundant
+
+
+
+
+/* 
 function generateQuote() {
     var authors_id = ["To Travel For Evermore", "Far From the Madding Crowd", "The Shadow Cabinet", "Salt"]; //insert ID's for wanted authors
     let quotes = new Map(); //map of quotes. Content changed according to author.
@@ -248,12 +296,4 @@ function generateQuote() {
 
     setQuote();
     setAuthor();
-}
-
-function setQuote() {
-    document.getElementById("quote").innerHTML = localStorage.quote;
-}
-
-function setAuthor() {
-    document.getElementById("authorName").innerHTML = localStorage.author;
-}
+} */
