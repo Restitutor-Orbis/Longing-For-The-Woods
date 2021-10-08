@@ -38,7 +38,7 @@ async function getRandomQuote() {
     const doc = await db.collection(album).doc(document).get().then((doc) => {
 
         //make sure linebreaks are converted from firebase format
-        var quote = doc.data().Quote.replaceAll( "\\n", "\n" );
+        var quote = doc.data().Quote.replaceAll( " \\n ", "\n" );
         var author = doc.data().Song + " (" + album + ")";
 
         localStorage.quote = quote;
