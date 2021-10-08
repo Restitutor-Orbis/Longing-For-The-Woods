@@ -24,7 +24,7 @@ function pickBackground() {
 
     var N = background.length; // number of images
     var image = randomPicker(N);
-    //image = 12;
+    //image = 6; //for viewing spcific image 
     var opacity = getOpacity(image); //changes brightness for individual papes
     image = background[image];
 
@@ -46,7 +46,7 @@ function getOpacity(imageNumber) {
             opacity = 0.7;
             break;
         case 1:
-            opacity = 0.75;
+            opacity = 0.65;
             break;
         case 2:
             opacity = 0.9;
@@ -61,7 +61,7 @@ function getOpacity(imageNumber) {
             opacity = 0.9;
             break;
         case 6:
-            opacity = 0.9;
+            opacity = 0.65;
             break;
         case 7:
             opacity = 0.7;
@@ -73,7 +73,7 @@ function getOpacity(imageNumber) {
             opacity = 0.45;
             break;
         case 10:
-            opacity = 0.85;
+            opacity = 0.75;
             break;
         case 11:
             opacity = 0.9;

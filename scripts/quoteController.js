@@ -11,8 +11,8 @@ function pickQuote() {
     } else {
         getRandomQuote();
     }
-    setQuote();
-    setAuthor();
+    updateQuoteDisplay();
+    updateAuthorDisplay();
 }
 
 function randomIntFromInterval(min, max) { // min and max included 
@@ -21,11 +21,12 @@ function randomIntFromInterval(min, max) { // min and max included
 
 async function getRandomQuote() {
 
-    var albums = ["Within", "To Travel for Evermore", "Far From the Madding Crows", "The Shadow Cabinet", "Salt"]
+    var albums = ["Within", "To Travel for Evermore", "Far From the Madding Crowd", "The Shadow Cabinet", "Salt"]
     var albumRanges = [19, 25, 27, 41, 67];
 
     //pick random album and select corresponding range
-    var randomNumber = randomIntFromInterval(0, 5);
+    var randomNumber = randomIntFromInterval(0, 4);
+    console.log(randomNumber);
     var album = albums[randomNumber];
     var range = albumRanges[randomNumber];
 
@@ -33,6 +34,10 @@ async function getRandomQuote() {
     var quoteIndex = randomIntFromInterval(1, range);
     var document = "Quote" + quoteIndex;
 
+    await fetchAndSetQuote(album, document);
+}
+
+async function fetchAndSetQuote(album, document) {
     //fetch from firebase database
     //make sure fetching is done before doing operations
     const doc = await db.collection(album).doc(document).get().then((doc) => {
@@ -43,17 +48,14 @@ async function getRandomQuote() {
 
         localStorage.quote = quote;
         localStorage.author = author;
-
-        setQuote();
-        setAuthor();
     });
 }
 
-function setQuote() {
+function updateQuoteDisplay() {
     document.getElementById("quote").innerHTML = localStorage.quote;
 }
 
-function setAuthor() {
+function updateAuthorDisplay() {
     document.getElementById("authorName").innerHTML = localStorage.author;
 }
 
