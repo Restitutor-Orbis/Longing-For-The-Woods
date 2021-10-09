@@ -26,7 +26,6 @@ async function getRandomQuote() {
 
     //pick random album and select corresponding range
     var randomNumber = randomIntFromInterval(0, 4);
-    console.log(randomNumber);
     var album = albums[randomNumber];
     var range = albumRanges[randomNumber];
 
